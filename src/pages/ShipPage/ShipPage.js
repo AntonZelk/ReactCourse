@@ -1,10 +1,10 @@
-import React, { Component } from "react";
-import { RenderPersonaList } from "../../SwServices";
+import React from "react";
+import { RenderShipList } from "../../SwServices";
 import { withRouter } from "react-router-dom";
 
-import "./PeoplePage.css";
+import "./ship-page.css";
 
-class PeoplePage extends Component {
+class ShipPage extends React.Component {
   state = {
     selectedItem: null,
   };
@@ -19,8 +19,8 @@ class PeoplePage extends Component {
     return (
       <div className="row mb2">
         <div className="col-md-6">
-          <RenderPersonaList
-            onSelectedItem={(id) => history.push(`/people/${id}`)}
+          <RenderShipList
+            onSelectedItem={(id) => history.push(`/ship/${id}`)}
           />
         </div>
       </div>
@@ -28,4 +28,4 @@ class PeoplePage extends Component {
   }
 }
 
-export default withRouter(PeoplePage);
+export default withRouter(ShipPage);

@@ -14,13 +14,10 @@ class ItemsDetail extends Component {
     loading: false,
   };
 
-  componentDidUpdate(prevProps) {
-    if (prevProps.selectedItem !== this.props.selectedItem) {
-      this.setState({ loading: true });
-      this.props.getItem(this.props.selectedItem).then((item) => {
-        this.setState({ item: item, loading: false });
-      });
-    }
+  componentDidMount() {
+    this.props.getItem(this.props.selectedItem).then((item) => {
+      this.setState({ item: item, loading: false });
+    });
   }
 
   render() {
@@ -75,6 +72,10 @@ const ViewItem = (props) => {
       <ErrorButton />
     </>
   );
+};
+
+ItemsDetail.defaultProps = {
+  selectedItem: 3,
 };
 
 export default ItemsDetail;

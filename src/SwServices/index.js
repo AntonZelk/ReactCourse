@@ -6,7 +6,7 @@ import Record from "../components/Record";
 import SwapiService from "../services/swapi-service";
 import { withConnect } from "../hoc";
 
-const { getAllPeople } = new SwapiService();
+const { getAllPeople, getAllPlanets, getAllStarships } = new SwapiService();
 
 const renderName = (item) => `${item.name}`;
 
@@ -33,4 +33,54 @@ const renderPersonaDetail = ({ itemId, swapiService }) => {
 
 const RenderPersonaDetail = withConnect(renderPersonaDetail);
 
-export { RenderPersonaList, RenderPersonaDetail };
+const RenderPlanetList = withData(
+  withChildFunction(ItemList, renderName),
+  getAllPlanets
+);
+
+const renderPlanetDetail = ({ itemId, swapiService }) => {
+  const { getPlanet, getPlanetImage } = swapiService;
+  return (
+    <ItemsDetail
+      selectedItem={itemId}
+      getItem={getPlanet}
+      getImage={getPlanetImage}
+      getMessage={`Нужно выбрать планету`}
+    >
+      <Record label={`Population`} field={`population`} />
+      <Record label={`Rotation Period`} field={`rotationPeriod`} />
+      <Record label={`Diameter`} field={`diameter`} />
+    </ItemsDetail>
+  );
+};
+
+const RenderPlanetDetail = withConnect(renderPlanetDetail);
+
+const RenderShipList = withData(
+  withChildFunction(ItemList, renderName),
+  getAllStarships
+);
+
+const renderShipDetail = ({ itemId, swapiService }) => {
+  const { getStarship, getStarshipImage } = swapiService;
+  return (
+    <ItemsDetail
+      selectedItem={itemId}
+      getItem={getStarship}
+      getImage={getStarshipImage}
+      getMessage={`Нужно выбрать звездный корабль`}
+    >
+       <Record label={`Model`} field={`model`} />
+        <Record label={`Manufacturer`} field={`manufacturer`} />
+        <Record label={`Cost`} field={`costInCredits`} />
+        <Record label={`length`} field={`length`} />
+        <Record label={`Cargo Capacity`} field={`cargoCapacity`} />
+        <Record label={`Minimum Crew`} field={`crew`} />
+        <Record label={`Passengers`} field={`passengers`} />
+    </ItemsDetail>
+  );
+};
+
+const RenderShipDetail = withConnect(renderShipDetail);
+
+export { RenderPersonaList, RenderPersonaDetail, RenderPlanetList, RenderPlanetDetail, RenderShipList, RenderShipDetail };

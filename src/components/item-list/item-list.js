@@ -1,7 +1,7 @@
 import React from "react";
 import "./item-list.css";
 
-ItemList = (props) => {
+const ItemList = (props) => {
   const { data, onSelectedItem, children } = props;
 
   return (
