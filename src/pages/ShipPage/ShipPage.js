@@ -1,9 +1,9 @@
-import React, { Component } from "react";
-import { RenderPersonaList, RenderPersonaDetail } from "../../SwServices";
+import React from "react";
+import { RenderShipList, RenderShipDetail } from "../../SwServices";
 
-import "./PeoplePage.css";
+import "./ship-page.css";
 
-class PersonPage extends Component {
+class ShipPage extends React.Component {
   state = {
     selectedItem: null,
   };
@@ -14,18 +14,18 @@ class PersonPage extends Component {
 
   render() {
     const { selectedItem } = this.state;
-    
+
     return (
       <div className="row mb2">
         <div className="col-md-6">
-          <RenderPersonaList onSelectedItem={this.onSelectedItem} />
+          <RenderShipList onSelectedItem={this.onSelectedItem} />
         </div>
         <div className="col-md-6">
-          <RenderPersonaDetail itemId={selectedItem} />
+          <RenderShipDetail itemId={selectedItem} />
         </div>
       </div>
     );
   }
 }
 
-export default PersonPage;
+export default ShipPage;

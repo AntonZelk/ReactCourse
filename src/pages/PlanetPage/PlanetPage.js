@@ -1,9 +1,9 @@
-import React, { Component } from "react";
-import { RenderPersonaList, RenderPersonaDetail } from "../../SwServices";
+import React from "react";
+import { RenderPlanetList, RenderPlanetDetail } from "../../SwServices";
 
-import "./PeoplePage.css";
+import "./planet-page.css";
 
-class PersonPage extends Component {
+class PlanetPage extends React.Component {
   state = {
     selectedItem: null,
   };
@@ -11,21 +11,22 @@ class PersonPage extends Component {
   onSelectedItem = (id) => {
     this.setState({ selectedItem: id });
   };
+  
 
   render() {
     const { selectedItem } = this.state;
-    
+
     return (
       <div className="row mb2">
         <div className="col-md-6">
-          <RenderPersonaList onSelectedItem={this.onSelectedItem} />
+          <RenderPlanetList onSelectedItem={this.onSelectedItem} />
         </div>
         <div className="col-md-6">
-          <RenderPersonaDetail itemId={selectedItem} />
+          <RenderPlanetDetail itemId={selectedItem} />
         </div>
       </div>
     );
   }
 }
 
-export default PersonPage;
+export default PlanetPage;

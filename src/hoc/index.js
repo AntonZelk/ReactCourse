@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import Spinner from "../spinner";
-import ErrorComponent from "../error-component";
+import Spinner from "../components/spinner";
+import ErrorComponent from "../components/error-component";
 import { SwapiConsumer } from "../context";
 
 const withData = (View, propsFunc) => {
@@ -11,7 +11,7 @@ const withData = (View, propsFunc) => {
       error: false,
     };
     componentDidMount() {
-      propsFunc().then(this.onDataLoaded.catch(this.onError));
+      propsFunc().then(this.onDataLoaded).catch(this.onError);
     }
 
     onDataLoaded = (data) => {

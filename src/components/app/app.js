@@ -6,11 +6,11 @@ import ErrorButton from "../error-button";
 import ErrorComponent from "../error-component";
 import PeoplePage from "../../pages/PeoplePage";
 import { SwapiProvider } from "../../context";
-
-// import ShipPage from "../../pages/Ship-page";
-// import PlanetPage from "../../pages/Planet-page";
+import ShipPage from "../../pages/ShipPage";
+import PlanetPage from "../../pages/PlanetPage";
 import "./app.css";
 import SwapiService from "../../services/swapi-service";
+
 const swapiService = new SwapiService();
 
 class App extends React.Component {
@@ -49,10 +49,9 @@ class App extends React.Component {
           Toggle Random Planet
         </button>
         <ErrorButton />
-
         <PeoplePage />
-        {/* <ShipPage />
-        <PlanetPage /> */}
+        <ShipPage />
+        <PlanetPage />
       </SwapiProvider>
     );
   }
