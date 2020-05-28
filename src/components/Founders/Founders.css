@@ -1,0 +1,164 @@
+.container3 {
+    position: absolute;
+    width: 1920px;
+    height: 400px;
+    left: 0px;
+    top: 150px;
+  }
+  
+  .about3 {
+    position: absolute;
+    width: 686px;
+    height: 300px;
+    left: 269px;
+    top: 200px;
+  }
+  
+  .text3 {
+    position: absolute;
+    width: 336px;
+    height: 187px;
+    left: 619px;
+    top: 257px;
+  }
+  .text-max3 {
+    position: absolute;
+    width: 336px;
+    height: 29px;
+    left: 619px;
+    top: 257px;
+  
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 37px;
+  
+    /* Gray 1 */
+  
+    color: #333333;
+  }
+  .text-mini3 {
+    position: absolute;
+    width: 277px;
+    height: 138px;
+    left: 619px;
+    top: 336px;
+  
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+  
+    /* Gray 3 */
+  
+    color: #828282;
+  }
+  
+  .fhoto3 {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    left: 269px;
+    top: 200px;
+  }
+  .fhoto31 {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    left: 269px;
+    top: 200px;
+    border-radius: 1000px;
+    background: url(../../img/fhoto1.png);
+    z-index: 1;
+  }
+  .fhoto32 {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    left: 269px;
+    top: 200px;
+  
+    background: #c4c4c4;
+    border-radius: 1000px;
+  }
+  
+  .about4 {
+    position: absolute;
+    width: 645px;
+    height: 300px;
+    left: 1005px;
+    top: 200px;
+  }
+  
+  .text4 {
+    position: absolute;
+    width: 295px;
+    height: 187px;
+    left: 1355px;
+    top: 257px;
+  }
+  .text-max4 {
+    position: absolute;
+    width: 295px;
+    height: 29px;
+    left: 1355px;
+    top: 257px;
+  
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 37px;
+  
+    /* Gray 1 */
+  
+    color: #333333;
+  }
+  .text-mini4 {
+    position: absolute;
+    width: 277px;
+    height: 138px;
+    left: 1355px;
+    top: 336px;
+  
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+  
+    /* Gray 3 */
+  
+    color: #828282;
+  }
+  
+  .fhoto4 {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    left: 1005px;
+    top: 200px;
+  }
+  .fhoto41 {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    left: 1005px;
+    top: 200px;
+  
+    border-radius: 1000px;
+    background: url(../../img/fhoto2.png);
+    z-index: 1;
+  }
+  .fhoto42 {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    left: 1005px;
+    top: 200px;
+  
+    background: #c4c4c4;
+    border-radius: 1000px;
+  }

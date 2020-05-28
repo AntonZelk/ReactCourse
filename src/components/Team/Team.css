@@ -1,0 +1,232 @@
+.container6 {
+    position: absolute;
+    width: 1920px;
+    height: 777px;
+    left: 0px;
+    top: 100px;
+  }
+  .team6 {
+    position: absolute;
+    width: 1087px;
+    height: 627px;
+    left: 415px;
+    top: 150px;
+    z-index: 1;
+  }
+  .text6 {
+    position: absolute;
+    width: 290px;
+    height: 29px;
+    left: 814px;
+    top: 150px;
+  
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 37px;
+    z-index: 1;
+    /* Gray 1 */
+  
+    color: #333333;
+  }
+  .fhoto61 {
+    position: absolute;
+    width: 349px;
+    height: 548px;
+    left: 1153px;
+    top: 229px;
+    z-index: 1;
+  }
+  .fhoto611 {
+    position: absolute;
+    width: 349px;
+    height: 450px;
+    left: 1153px;
+    top: 229px;
+    z-index: 1;
+    background: url(../../img/img63.png);
+  }
+  
+  .fhoto612 {
+    position: absolute;
+    width: 349px;
+    height: 68px;
+    left: 1153px;
+    top: 709px;
+    z-index: 1;
+  }
+  .fhoto6121 {
+    position: absolute;
+    width: 349px;
+    height: 19px;
+    left: 1153px;
+    top: 758px;
+    z-index: 1;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+  
+    /* Gray 3 */
+  
+    color: #828282;
+  }
+  .fhoto6122 {
+    position: absolute;
+    width: 349px;
+    height: 29px;
+    left: 1153px;
+    top: 709px;
+  
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 37px;
+    text-align: center;
+    z-index: 1;
+  
+    /* Gray 1 */
+  
+    color: #333333;
+  }
+  .fhoto62 {
+    position: absolute;
+    width: 349px;
+    height: 548px;
+    left: 784px;
+    top: 229px;
+    z-index: 1;
+  }
+  .fhoto621 {
+    position: absolute;
+    width: 349px;
+    height: 68px;
+    left: 784px;
+    top: 709px;
+    z-index: 1;
+  }
+  .fhoto6211 {
+    position: absolute;
+    width: 349px;
+    height: 19px;
+    left: 784px;
+    top: 758px;
+    z-index: 1;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+  
+    /* Gray 3 */
+  
+    color: #828282;
+  }
+  .fhoto6212 {
+    position: absolute;
+    width: 349px;
+    height: 29px;
+    left: 784px;
+    top: 709px;
+  
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 37px;
+    z-index: 1;
+    text-align: center;
+  
+    /* Gray 1 */
+  
+    color: #333333;
+  }
+  .fhoto622 {
+    position: absolute;
+    width: 349px;
+    height: 450px;
+    left: 784px;
+    top: 229px;
+  
+    background: url(../../img/img62.png);
+    z-index: 1;
+  }
+  
+  .fhoto63 {
+    position: absolute;
+    width: 349px;
+    height: 548px;
+    left: 415px;
+    top: 229px;
+    z-index: 1;
+  }
+  .fhoto631 {
+    position: absolute;
+    width: 349px;
+    height: 68px;
+    left: 415px;
+    top: 709px;
+    z-index: 1;
+  }
+  .fhoto6311 {
+    position: absolute;
+    width: 349px;
+    height: 19px;
+    left: 415px;
+    top: 758px;
+    z-index: 1;
+  
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+  
+    /* Gray 3 */
+  
+    color: #828282;
+  }
+  .fhoto6312 {
+    position: absolute;
+    width: 349px;
+    height: 29px;
+    left: 415px;
+    top: 709px;
+    z-index: 1;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 37px;
+    text-align: center;
+  
+    /* Gray 1 */
+  
+    color: #333333;
+  }
+  .fhoto632 {
+    position: absolute;
+    width: 349px;
+    height: 450px;
+    left: 415px;
+    top: 229px;
+    z-index: 1;
+    background: url(../../img/img61.png);
+  }
+  .back6 {
+    position: absolute;
+    width: 1920px;
+    height: 777px;
+    left: 0px;
+    top: 100px;
+  
+    /* Gray 6 */
+  
+    background: #f2f2f2;
+  }
