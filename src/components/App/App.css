@@ -1,0 +1,81 @@
+body {
+  margin: 0;
+}
+
+#root {
+  width: 100%;
+  height: 768px;
+  background: linear-gradient(180deg, #0837b0 0%, #021e66 100%);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.block {
+  width: 300px;
+  height: 300px;
+  background: #fff;
+  box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.25);
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.text {
+  font-size: 150px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 40px;
+}
+
+.btn {
+  width: 65px;
+  height: 65px;
+  border-radius: 4px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+.btnPlus {
+  background: #089c20;
+  display: flex;
+  justify-content: center;
+}
+
+.btnMinus {
+  background: #e7aa10;
+  display: flex;
+  justify-content: center;
+}
+
+.btnRes {
+  background: #cf1c1c;
+  display: flex;
+  justify-content: center;
+}
+
+.plus {
+  background-image: url("../../img/plus.png");
+  width: 40px;
+  height: 40px;
+}
+
+.minus {
+  background-repeat: none;
+  background: url("../../img/minus.png");
+  width: 40px;
+  height: 20px;
+  margin-top: 10px;
+}
+
+.res {
+  background-image: url("../../img/reset.png");
+  width: 40px;
+  height: 40px;
+}
