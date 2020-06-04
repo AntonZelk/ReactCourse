@@ -23,4 +23,11 @@ const booksRemoveToCart = id => {
 	};
 };
 
-export { booksLoaded, booksAddToCart, booksRemoveToCart };
+const booksRemove = id => {
+	return {
+		type: "BOOKS_REMOVE",
+		payload: id,
+	};
+};
+
+export { booksLoaded, booksAddToCart, booksRemoveToCart, booksRemove };

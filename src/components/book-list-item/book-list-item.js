@@ -1,6 +1,5 @@
 import React from "react";
 import "./book-list-item.css";
-import { checkPropTypes } from "prop-types";
 
 const BookListItem = props => {
 	const { book, booksAddToCart } = props;

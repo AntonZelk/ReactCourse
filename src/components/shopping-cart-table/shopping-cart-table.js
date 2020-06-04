@@ -1,7 +1,7 @@
 import React from "react";
 import "./shopping-cart-table.css";
 import { connect } from "react-redux";
-import { booksAddToCart, booksRemoveToCart } from "../../actions";
+import { booksAddToCart, booksRemoveToCart, booksRemove } from "../../actions";
 
 const CartItem = props => {
 	const { item, onInc, onDec, onDelete } = props;
@@ -84,7 +84,7 @@ const mapDispatchToProps = dispatch => {
 	return {
 		onInc: id => dispatch(booksAddToCart(id)),
 		onDec: id => dispatch(booksRemoveToCart(id)),
-		onDelete: id => booksAddToCart(id),
+		onDelete: id => dispatch(booksRemove(id)),
 	};
 };
 

@@ -25,7 +25,8 @@ const updateCart = (state, action, amount) => {
 		} else {
 			return { ...state, cartItems };
 		}
-	} else {
+	} 	
+	else {
 		const newcartBook = {
 			id: cartBook.id,
 			title: cartBook.title,
@@ -38,6 +39,14 @@ const updateCart = (state, action, amount) => {
 		};
 	}
 };
+
+const deleteCart = (state) =>{
+	console.log(state);
+	return {
+		...state,
+		cartItems: [],
+	};
+}
 
 const reducer = (state = initialState, action) => {
 	switch (action.type) {
@@ -52,6 +61,8 @@ const reducer = (state = initialState, action) => {
 
 		case "BOOKS_REMOVE_TO_CART":
 			return updateCart(state, action, -1);
+		case "BOOKS_REMOVE":
+		    return deleteCart(state);
 
 		default:
 			return state;
