@@ -1,14 +1,12 @@
-.header {
-  position: absolute;
+.menu {
   width: 355px;
   display: flex;
   justify-content: space-between;
   margin-top: 0px;
-  margin-left: 148px;
   margin-bottom: 0px;
   margin-right: 0px;
   padding-top: 30px;
-  z-index: 999;
+  z-index: 100000;
 }
 li {
   display: flex;
@@ -18,6 +16,12 @@ li {
   vertical-align: bottom;
   align-items: flex-end;
   color: #ffffff;
+  z-index: 999;
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+li:hover {
+  font-size: 16px;
 }
 ul {
   padding-inline-start: 0px;

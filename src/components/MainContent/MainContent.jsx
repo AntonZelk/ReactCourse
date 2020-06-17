@@ -1,4 +1,5 @@
 import React from 'react';
+import Beans from '../Beans';
 
 import './MainContent.scss';
 
@@ -6,11 +7,7 @@ const MainContent = () => {
   return (
     <div className="main-content">
       <h2 className="about">About Us</h2>
-      <div className="beans">
-        <img className="lineBl" src="./img/lineBl.png" alt="line"></img>
-        <img className="beanBl" src="./img/beansBl.png" alt="beans"></img>
-        <img className="lineBl" src="./img/lineBl.png" alt="line"></img>
-      </div>
+      <Beans color="./img/beansBl.png" line="./img/lineBl.png" />
       <p className="content">
         Extremity sweetness difficult behaviour he of. On disposal of as
         landlord horrible. Afraid at highly months do things on at. Situation

@@ -1,11 +1,11 @@
 import React from 'react';
 
-import './Header.scss';
+import './Menu.scss';
 
-const Header = () => {
+const Menu = () => {
   return (
     <div>
-      <ul className="header">
+      <ul className="menu">
         <li>
           <img className="logo" src="./img/logo.png" alt="logo"></img>Coffee
           house
@@ -17,4 +17,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default Menu;
