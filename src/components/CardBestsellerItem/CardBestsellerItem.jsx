@@ -1,10 +1,10 @@
 import React from 'react';
 
-import './CardItem.scss';
+import './CardBestsellerItem.scss';
 
-const CardItem = (props) => {
-  const { item } = props;
-  const { name, url, price } = item;
+const CardBestsellerItem = (props) => {
+  const { bestseller } = props;
+  const { name, url, price } = bestseller;
   return (
     <div className="card">
       <img className="img-card" src={url} alt="card1"></img>
@@ -14,4 +14,4 @@ const CardItem = (props) => {
   );
 };
 
-export default CardItem;
+export default CardBestsellerItem;

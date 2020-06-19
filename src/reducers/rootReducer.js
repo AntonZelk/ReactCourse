@@ -1,8 +1,16 @@
 import { combineReducers } from 'redux';
-import { items, itemsHasErrored, itemsIsLoading } from './items';
+import {
+  bestHasErrored,
+  bestIsLoading,
+  bestsellers,
+  coffee,
+  goods,
+} from './BestsellerReducer';
 
 export default combineReducers({
-  items,
-  itemsHasErrored,
-  itemsIsLoading,
+  bestHasErrored,
+  bestIsLoading,
+  bestsellers,
+  coffee,
+  goods,
 });
