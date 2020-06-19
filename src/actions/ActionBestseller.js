@@ -41,49 +41,28 @@ const errorAfterFiveSeconds = () => {
 const bestFetchData = (url, flag) => {
   return (dispatch) => {
     dispatch(bestIsLoading(true));
-    if (flag === 'bestsellers') {
-      fetch(url)
-        .then((res) => {
-          if (!res.ok) {
-            throw Error(res.statusText);
-          }
 
-          dispatch(bestIsLoading(false));
+    fetch(url)
+      .then((res) => {
+        if (!res.ok) {
+          throw Error(res.statusText);
+        }
 
-          return res;
-        })
-        .then((res) => res.json())
-        .then((res) => dispatch(bestFetchDataSuccess(res)))
-        .catch(() => dispatch(bestHasErrored(true)));
-    } else if (flag === 'coffee') {
-      fetch(url)
-        .then((res) => {
-          if (!res.ok) {
-            throw Error(res.statusText);
-          }
+        dispatch(bestIsLoading(false));
 
-          dispatch(bestIsLoading(false));
-
-          return res;
-        })
-        .then((res) => res.json())
-        .then((res) => dispatch(coffeeFetchDataSuccess(res)))
-        .catch(() => dispatch(bestHasErrored(true)));
-    } else if (flag === 'goods') {
-      fetch(url)
-        .then((res) => {
-          if (!res.ok) {
-            throw Error(res.statusText);
-          }
-
-          dispatch(bestIsLoading(false));
-
-          return res;
-        })
-        .then((res) => res.json())
-        .then((res) => dispatch(goodsFetchDataSuccess(res)))
-        .catch(() => dispatch(bestHasErrored(true)));
-    }
+        return res;
+      })
+      .then((res) => res.json())
+      .then((res) => {
+        if (flag === 'bestsellers') {
+          dispatch(bestFetchDataSuccess(res));
+        } else if (flag === 'coffee') {
+          dispatch(coffeeFetchDataSuccess(res));
+        } else if (flag === 'goods') {
+          dispatch(goodsFetchDataSuccess(res));
+        }
+      })
+      .catch(() => dispatch(bestHasErrored(true)));
   };
 };
 

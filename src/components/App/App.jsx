@@ -8,7 +8,6 @@ import CardsBestsellers from '../CardsBestsellers';
 import Search from '../Search';
 import CardsCoffee from '../CardsCoffee';
 import CardDetails from '../CardDetails';
-import Spinner from '../Spinner';
 import { connect } from 'react-redux';
 import { bestFetchData } from '../../actions/ActionBestseller';
 
