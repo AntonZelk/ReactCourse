@@ -2,6 +2,7 @@ import React from 'react';
 import Menu from '../Menu';
 import Beans from '../Beans';
 import './MainTitle.scss';
+import { Link } from 'react-router-dom';
 
 const MainTitle = () => {
   return (
@@ -17,7 +18,9 @@ const MainTitle = () => {
         <h2 className="text1">We makes every day full of energy and taste</h2>
         <h2 className="text2">Want to try our beans?</h2>
         <div className="btn">
-          <a href="1">More</a>
+          <Link className="link" to="/coffee">
+            More
+          </Link>
         </div>
       </div>
     </div>

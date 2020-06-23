@@ -1,12 +1,17 @@
 import React from 'react';
 
-import './CardCoffeeItem.scss';
+import './CardItem.scss';
 
-const CardCoffeeItem = (props) => {
-  const { item } = props;
-  const { name, url, price, country } = item;
+const CardItem = ({ item, getItemId }) => {
+  const { name, url, price, country, id } = item;
   return (
-    <div className="card-beans">
+    <div
+      className="card-beans"
+      onClick={() => {
+        getItemId(id);
+        console.log(id);
+      }}
+    >
       <img className="img-card-beans" src={url} alt="card2"></img>
       <p className="card-text-beans">{name}</p>
       <p className="card-country-beans">{country}</p>
@@ -15,4 +20,4 @@ const CardCoffeeItem = (props) => {
   );
 };
 
-export default CardCoffeeItem;
+export default CardItem;

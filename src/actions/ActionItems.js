@@ -1,13 +1,13 @@
-const bestHasErrored = (bool) => {
+const ItemHasErrored = (bool) => {
   return {
-    type: 'BEST_HAS_ERRORED',
+    type: 'ITEM_HAS_ERRORED',
     hasErrored: bool,
   };
 };
 
-const bestIsLoading = (bool) => {
+const ItemIsLoading = (bool) => {
   return {
-    type: 'BEST_IS_LOADING',
+    type: 'ITEM_IS_LOADING',
     isLoading: bool,
   };
 };
@@ -33,14 +33,14 @@ const goodsFetchDataSuccess = (goods) => {
 const errorAfterFiveSeconds = () => {
   return (dispatch) => {
     setTimeout(() => {
-      dispatch(bestHasErrored(true));
+      dispatch(ItemHasErrored(true));
     }, 5000);
   };
 };
 
-const bestFetchData = (url, flag) => {
+const ItemFetchData = (url, flag) => {
   return (dispatch) => {
-    dispatch(bestIsLoading(true));
+    dispatch(ItemIsLoading(true));
 
     fetch(url)
       .then((res) => {
@@ -48,7 +48,7 @@ const bestFetchData = (url, flag) => {
           throw Error(res.statusText);
         }
 
-        dispatch(bestIsLoading(false));
+        dispatch(ItemIsLoading(false));
 
         return res;
       })
@@ -62,16 +62,23 @@ const bestFetchData = (url, flag) => {
           dispatch(goodsFetchDataSuccess(res));
         }
       })
-      .catch(() => dispatch(bestHasErrored(true)));
+      .catch(() => dispatch(ItemHasErrored(true)));
+  };
+};
+const getItemId = (id) => {
+  return {
+    type: 'GET_ITEM_ID',
+    payload: id,
   };
 };
 
 export {
-  bestHasErrored,
-  bestIsLoading,
+  ItemHasErrored,
+  ItemIsLoading,
   bestFetchDataSuccess,
   coffeeFetchDataSuccess,
   goodsFetchDataSuccess,
   errorAfterFiveSeconds,
-  bestFetchData,
+  ItemFetchData,
+  getItemId,
 };

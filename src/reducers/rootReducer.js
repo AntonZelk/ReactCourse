@@ -1,16 +1,18 @@
 import { combineReducers } from 'redux';
 import {
-  bestHasErrored,
-  bestIsLoading,
+  ItemHasErrored,
+  ItemIsLoading,
   bestsellers,
   coffee,
   goods,
-} from './BestsellerReducer';
+  addItem,
+} from './ItemsReducer';
 
 export default combineReducers({
-  bestHasErrored,
-  bestIsLoading,
+  ItemHasErrored,
+  ItemIsLoading,
   bestsellers,
   coffee,
   goods,
+  addItem,
 });

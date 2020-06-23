@@ -3,17 +3,13 @@ import Beans from '../Beans';
 
 import './AboutOurBeans.scss';
 
-const AboutOurBeans = () => {
+const AboutOurBeans = ({ titleAbout, imgAbout }) => {
   return (
     <div className="container-beans">
       <div className="about-our-beans">
-        <img
-          className="img-our-beans"
-          src="./img/about-our-beans.png"
-          alt="our-beans"
-        ></img>
+        <img className="img-our-beans" src={imgAbout} alt="our-beans"></img>
         <div className="content-about-our-beans">
-          <h2 className="about">About our beans</h2>
+          <h2 className="about">{titleAbout}</h2>
           <Beans color="./img/beansBl.png" line="./img/lineBl.png" />
           <p className="text-beans">
             Extremity sweetness difficult behaviour he of. On disposal of as

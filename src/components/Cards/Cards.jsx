@@ -1,10 +1,10 @@
 import React from 'react';
 import Spinner from '../Spinner';
-import CardCoffeeItem from '../CardCoffeeItem';
+import CardItem from '../CardItem';
 
-import './CardsCoffee.scss';
+import './Cards.scss';
 
-const CardsCoffee = ({ coffee, hasErrored, isLoading }) => {
+const Cards = ({ items, hasErrored, isLoading, getItemId }) => {
   if (hasErrored) {
     return <p>Sorry! There was an error loading the items</p>;
   }
@@ -14,11 +14,11 @@ const CardsCoffee = ({ coffee, hasErrored, isLoading }) => {
   }
   return (
     <div className="container-cards-beans">
-      {coffee.map((item) => {
-        return <CardCoffeeItem item={item} key={item.id} />;
+      {items.map((item) => {
+        return <CardItem item={item} key={item.id} getItemId={getItemId} />;
       })}
     </div>
   );
 };
 
-export default CardsCoffee;
+export default Cards;

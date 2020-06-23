@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,MAAM,CAAC;EACL,OAAO,EAAE,IAAI;EACb,WAAW,EAAE,MAAM;EACnB,KAAK,EAAE,KAAK;EACZ,MAAM,EAAE,MAAM;EACd,eAAe,EAAE,aAAa;CAC/B",
+    "sources": [
+        "Beans.scss"
+    ],
+    "names": [],
+    "file": "Beans.css"
+}
