@@ -63,4 +63,33 @@ const addItem = (state = initialState, action) => {
   }
 };
 
-export { ItemHasErrored, ItemIsLoading, bestsellers, coffee, goods, addItem };
+const search = (state = '', action) => {
+  switch (action.type) {
+    case 'SEARCH':
+      return action.payload;
+
+    default:
+      return state;
+  }
+};
+
+const clickCountry = (state = '', action) => {
+  switch (action.type) {
+    case 'CLICK_COUNTRY':
+      return action.country;
+
+    default:
+      return state;
+  }
+};
+
+export {
+  ItemHasErrored,
+  ItemIsLoading,
+  bestsellers,
+  coffee,
+  goods,
+  addItem,
+  search,
+  clickCountry,
+};

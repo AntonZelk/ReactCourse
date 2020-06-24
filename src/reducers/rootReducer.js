@@ -6,6 +6,8 @@ import {
   coffee,
   goods,
   addItem,
+  search,
+  clickCountry,
 } from './ItemsReducer';
 
 export default combineReducers({
@@ -15,4 +17,6 @@ export default combineReducers({
   coffee,
   goods,
   addItem,
+  search,
+  clickCountry,
 });

@@ -50,15 +50,15 @@ const ItemFetchData = (url, flag) => {
 
         dispatch(ItemIsLoading(false));
 
-        return res;
+        return res.json();
       })
-      .then((res) => res.json())
+      // .then((res) => res.json())
       .then((res) => {
-        if (flag === 'bestsellers') {
+        if (url.match('bestsellers')) {
           dispatch(bestFetchDataSuccess(res));
-        } else if (flag === 'coffee') {
+        } else if (url.match('coffee')) {
           dispatch(coffeeFetchDataSuccess(res));
-        } else if (flag === 'goods') {
+        } else if (url.match('goods')) {
           dispatch(goodsFetchDataSuccess(res));
         }
       })
@@ -72,6 +72,16 @@ const getItemId = (id) => {
   };
 };
 
+const search = (searchStr) => ({
+  type: 'SEARCH',
+  payload: searchStr,
+});
+
+const clickCountry = (country) => ({
+  type: 'CLICK_COUNTRY',
+  country,
+});
+
 export {
   ItemHasErrored,
   ItemIsLoading,
@@ -81,4 +91,6 @@ export {
   errorAfterFiveSeconds,
   ItemFetchData,
   getItemId,
+  search,
+  clickCountry,
 };

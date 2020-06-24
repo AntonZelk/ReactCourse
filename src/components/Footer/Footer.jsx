@@ -10,9 +10,9 @@ const Footer = () => {
         <Menu />
       </div>
       <div className="beans">
-        <img className="lineBl" src="./img/lineBl.png" alt="line"></img>
-        <img className="beanBl" src="./img/beansBl.png" alt="beans"></img>
-        <img className="lineBl" src="./img/lineBl.png" alt="line"></img>
+        <img className="lineBl" src="/img/lineBl.png" alt="line"></img>
+        <img className="beanBl" src="/img/beansBl.png" alt="beans"></img>
+        <img className="lineBl" src="/img/lineBl.png" alt="line"></img>
       </div>
     </div>
   );

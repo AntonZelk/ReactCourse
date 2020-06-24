@@ -8,7 +8,7 @@ const Menu = () => {
     <div>
       <ul className="menu">
         <li>
-          <img className="logo" src="./img/logo.png" alt="logo"></img>
+          <img className="logo" src="/img/logo.png" alt="logo"></img>
           <Link className="link-menu" to="/">
             Coffee house
           </Link>

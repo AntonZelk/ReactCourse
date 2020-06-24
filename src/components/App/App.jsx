@@ -1,117 +1,38 @@
-import React, { Component } from 'react';
+import React, { useEffect } from 'react';
+import { useDispatch } from 'react-redux';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+
 import MainPage from '../../pages/MainPage';
 import CoffeePage from '../../pages/CoffeePage';
 import GoodsPage from '../../pages/GoodsPage';
 import CoffeeDetailPage from '../../pages/CoffeeDetailPage';
-import { connect } from 'react-redux';
-import { ItemFetchData, getItemId } from '../../actions/ActionItems';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import GoodsDetailPage from '../../pages/GoodsDetailPage';
+import { ItemFetchData } from '../../actions/ActionItems';
 
 import './App.scss';
 
-class App extends Component {
-  componentDidMount() {
-    const { fetchBestsellers, fetchCoffee, fetchGoods, getItemId } = this.props;
+const App = () => {
+  const dispatch = useDispatch();
 
-    fetchBestsellers('http://localhost:5000/bestsellers');
-    fetchCoffee('http://localhost:5000/coffee');
-    fetchGoods('http://localhost:5000/goods');
-    getItemId(3);
-  }
+  useEffect(() => {
+    dispatch(ItemFetchData('http://localhost:5000/bestsellers'));
+    dispatch(ItemFetchData('http://localhost:5000/coffee'));
+    dispatch(ItemFetchData('http://localhost:5000/goods'));
+  }, [dispatch]);
 
-  render() {
-    const {
-      bestsellers,
-      coffee,
-      goods,
-      hasErrored,
-      isLoading,
-      itemId,
-      getItemId,
-    } = this.props;
-
-    return (
-      <div className="app">
-        <Router>
-          <Switch>
-            <Route
-              path="/"
-              render={(props) => (
-                <MainPage
-                  bestsellers={bestsellers}
-                  hasErrored={hasErrored}
-                  isLoading={isLoading}
-                />
-              )}
-              exact
-            />
-
-            <Route
-              path="/coffee"
-              render={(props) => (
-                <CoffeePage
-                  coffee={coffee}
-                  hasErrored={hasErrored}
-                  isLoading={isLoading}
-                  getItemId={getItemId}
-                />
-              )}
-              exact
-            />
-            <Route
-              path="/coffee:id"
-              render={(props) => (
-                <CoffeeDetailPage
-                  coffee={coffee[itemId]}
-                  hasErrored={hasErrored}
-                  isLoading={isLoading}
-                  itemId={itemId}
-                />
-              )}
-            />
-            <Route
-              path="/goods"
-              render={(props) => (
-                <GoodsPage
-                  goods={goods}
-                  hasErrored={hasErrored}
-                  isLoading={isLoading}
-                />
-              )}
-              exact
-            />
-          </Switch>
-        </Router>
-      </div>
-    );
-  }
-}
-
-const mapStateToProps = ({
-  bestsellers: { bestsellers },
-  coffee: { coffee },
-  goods: { goods },
-  addItem: { itemId },
-  bestHasErrored,
-  bestIsLoading,
-}) => {
-  return {
-    itemId: itemId,
-    bestsellers: bestsellers,
-    coffee: coffee,
-    goods: goods,
-    hasErrored: bestHasErrored,
-    isLoading: bestIsLoading,
-  };
+  return (
+    <div className="app">
+      <Router>
+        <Switch>
+          <Route path="/" component={MainPage} exact />
+          <Route path="/coffee" component={CoffeePage} exact />
+          <Route path="/coffee/:id" component={CoffeeDetailPage} />
+          <Route path="/goods" component={GoodsPage} exact />
+          <Route path="/goods/:id" component={GoodsDetailPage} />
+        </Switch>
+      </Router>
+    </div>
+  );
 };
 
-const mapDispatchToProps = (dispatch) => {
-  return {
-    fetchBestsellers: (url) => dispatch(ItemFetchData(url, 'bestsellers')),
-    fetchCoffee: (url) => dispatch(ItemFetchData(url, 'coffee')),
-    fetchGoods: (url) => dispatch(ItemFetchData(url, 'goods')),
-    getItemId: (id) => dispatch(getItemId(id)),
-  };
-};
-
-export default connect(mapStateToProps, mapDispatchToProps)(App);
+export default App;

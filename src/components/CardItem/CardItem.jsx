@@ -1,17 +1,20 @@
-import React from 'react';
+import React, { useCallback } from 'react';
+import { useHistory } from 'react-router-dom';
+
+import { getItemId } from '../../actions/ActionItems';
 
 import './CardItem.scss';
 
-const CardItem = ({ item, getItemId }) => {
+const CardItem = ({ item }) => {
   const { name, url, price, country, id } = item;
+  const history = useHistory();
+  const onClick = useCallback(() => {
+    getItemId(id);
+    history.push(`${history.location.pathname}/${id}`);
+  }, [history, id]);
+
   return (
-    <div
-      className="card-beans"
-      onClick={() => {
-        getItemId(id);
-        console.log(id);
-      }}
-    >
+    <div className="card-beans" onClick={onClick}>
       <img className="img-card-beans" src={url} alt="card2"></img>
       <p className="card-text-beans">{name}</p>
       <p className="card-country-beans">{country}</p>

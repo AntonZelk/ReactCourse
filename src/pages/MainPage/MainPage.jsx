@@ -6,16 +6,12 @@ import Footer from '../../components/Footer';
 
 import './MainPage.scss';
 
-const MainPage = ({ bestsellers, hasErrored, isLoading }) => {
+const MainPage = () => {
   return (
     <div>
       <MainTitle />
       <MainContent />
-      <CardsBestsellers
-        bestsellers={bestsellers}
-        hasErrored={hasErrored}
-        isLoading={isLoading}
-      />
+      <CardsBestsellers />
       <Footer />
     </div>
   );

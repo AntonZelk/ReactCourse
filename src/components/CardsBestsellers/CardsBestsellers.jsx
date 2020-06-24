@@ -1,10 +1,20 @@
 import React from 'react';
+import { useSelector } from 'react-redux';
 import Spinner from '../Spinner';
 import CardBestsellerItem from '../CardBestsellerItem';
+import {
+  selectBestsellers,
+  selectItemHasErrored,
+  selectItemIsLoading,
+} from '../../selectors/ItemsSelector';
 
 import './CardsBestsellers.scss';
 
-const CardsBestsellers = ({ bestsellers, isLoading, hasErrored }) => {
+const CardsBestsellers = () => {
+  const bestsellers = useSelector(selectBestsellers);
+  const isLoading = useSelector(selectItemIsLoading);
+  const hasErrored = useSelector(selectItemHasErrored);
+
   if (hasErrored) {
     return <p>Sorry! There was an error loading the items</p>;
   }
