@@ -23,9 +23,12 @@ const Cards = ({ items }) => {
   const arr = useMemo(
     () =>
       pathname === '/coffee'
-        ? items.filter((item) => item.country.match(countryBtn))
+        ? items.filter(
+            (item) =>
+              item.country.match(countryBtn) && item.name.match(searchStr)
+          )
         : items,
-    [items, pathname, countryBtn]
+    [items, pathname, countryBtn, searchStr]
   );
 
   if (hasErrored) {

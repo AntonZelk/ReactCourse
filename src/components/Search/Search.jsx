@@ -1,7 +1,7 @@
 import React, { useCallback } from 'react';
 import { useDispatch } from 'react-redux';
 
-import { search, clickCountry } from '../../actions/ActionItems';
+import { search, clickCountry } from '../../actions/filter';
 
 import './Search.scss';
 

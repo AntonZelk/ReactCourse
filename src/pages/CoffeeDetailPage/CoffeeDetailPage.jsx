@@ -1,9 +1,10 @@
 import React, { useMemo } from 'react';
+import { useParams } from 'react-router-dom';
+import { useSelector } from 'react-redux';
+
 import Header from '../../components/Header';
 import CardDetails from '../../components/CardDetails';
 import Footer from '../../components/Footer';
-import { useParams } from 'react-router-dom';
-import { useSelector } from 'react-redux';
 import { selectCoffee } from '../../selectors/ItemsSelector';
 
 import './CoffeeDetailPage.scss';

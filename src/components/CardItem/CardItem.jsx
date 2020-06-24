@@ -1,7 +1,7 @@
 import React, { useCallback } from 'react';
 import { useHistory } from 'react-router-dom';
 
-import { getItemId } from '../../actions/ActionItems';
+import { getItemId } from '../../actions/getItemId';
 
 import './CardItem.scss';
 

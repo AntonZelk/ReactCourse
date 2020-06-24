@@ -7,7 +7,7 @@ import CoffeePage from '../../pages/CoffeePage';
 import GoodsPage from '../../pages/GoodsPage';
 import CoffeeDetailPage from '../../pages/CoffeeDetailPage';
 import GoodsDetailPage from '../../pages/GoodsDetailPage';
-import { ItemFetchData } from '../../actions/ActionItems';
+import { itemFetchData } from '../../actions/itemFetchData';
 
 import './App.scss';
 
@@ -15,9 +15,9 @@ const App = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(ItemFetchData('http://localhost:5000/bestsellers'));
-    dispatch(ItemFetchData('http://localhost:5000/coffee'));
-    dispatch(ItemFetchData('http://localhost:5000/goods'));
+    dispatch(itemFetchData('http://localhost:5000/bestsellers'));
+    dispatch(itemFetchData('http://localhost:5000/coffee'));
+    dispatch(itemFetchData('http://localhost:5000/goods'));
   }, [dispatch]);
 
   return (

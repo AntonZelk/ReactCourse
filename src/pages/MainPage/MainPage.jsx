@@ -1,4 +1,5 @@
 import React from 'react';
+
 import MainTitle from '../../components/MainTitle';
 import MainContent from '../../components/MainContent';
 import CardsBestsellers from '../../components/CardsBestsellers';
