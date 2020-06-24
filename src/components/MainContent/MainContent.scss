@@ -1,0 +1,31 @@
+.main-content {
+  width: 100%;
+  margin-top: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.about {
+  font-family: Merienda;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 35px;
+
+  color: #000000;
+}
+.content {
+  width: 589px;
+  font-family: 'Merienda';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
+
+  color: #000000;
+}
+.bottom {
+  padding-bottom: 65px;
+}

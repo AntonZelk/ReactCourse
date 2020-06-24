@@ -1,0 +1,105 @@
+.main-title {
+  position: relative;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  z-index: 4;
+  background-image: url("../../img/main.png");
+  padding-bottom: 192px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+h1 {
+  font-family: 'Merienda';
+  font-style: normal;
+  font-size: 40px;
+  color: #ffffff;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  line-height: 58px;
+  margin-top: 181px;
+  margin-bottom: 8px;
+}
+
+h2 {
+  font-family: 'Merienda';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 35px;
+  color: #ffffff;
+}
+
+.text1 {
+  margin-top: 40px;
+  margin-bottom: 0;
+}
+
+.text2 {
+  margin-top: 10px;
+}
+
+.btn {
+  border: 1px solid #ffffff;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 3px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+}
+
+.btn:hover {
+  -webkit-box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+}
+
+.link {
+  padding: 5px 50px;
+  text-decoration: none;
+  font-family: 'Merienda';
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 20px;
+  -webkit-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+  color: #ffffff;
+}
+
+.link:hover {
+  background: #4a2727;
+  padding: 7px 60px;
+  border-radius: 10px;
+}
+
+.main-menu {
+  margin-left: 148px;
+  position: absolute;
+  z-index: 999;
+}
+/*# sourceMappingURL=MainTitle.css.map */

@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,kBAAkB,CAAC;EACjB,MAAM,EAAE,KAAK;EACb,gBAAgB,EAAE,iCAAiC;CACpD",
+    "sources": [
+        "GoodsPage.scss"
+    ],
+    "names": [],
+    "file": "GoodsPage.css"
+}

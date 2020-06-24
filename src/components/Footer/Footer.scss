@@ -1,0 +1,24 @@
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 150px;
+}
+
+.menu-footer {
+  width: 355px;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+  margin-bottom: 0px;
+  margin-right: 0px;
+  z-index: 999;
+}
+.footer .link-menu {
+  color: #000000;
+}
+.footer .beans {
+  margin-top: 45px;
+  margin-bottom: 22px;
+}

@@ -1,0 +1,74 @@
+.container-search {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 60px;
+  padding-bottom: 60px;
+}
+.span-search {
+  font-family: Merienda;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
+  color: #000000;
+  margin-right: 19px;
+}
+.input-search {
+  width: 180px;
+  height: 30px;
+  background: #ffffff;
+  box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.25);
+  border-radius: 4px;
+  text-align: center;
+  font-family: Merienda;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+}
+.input-search::placeholder {
+  font-family: Merienda;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 17px;
+  color: rgba(0, 0, 0, 0.5);
+}
+.filter {
+  display: flex;
+  align-items: center;
+}
+.span-filter {
+  margin-left: 83px;
+  margin-right: 30px;
+  font-family: Merienda;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
+  color: #000000;
+}
+.btn-filter {
+  width: 75px;
+  height: 30px;
+  background: #ffffff;
+  box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.25);
+  border-radius: 4px 0px 0px 4px;
+  font-family: Merienda;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 17px;
+  text-align: center;
+  color: #000000;
+  margin-left: 5px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+.btn-filter:hover {
+  width: 85px;
+  height: 35px;
+  font-size: 14px;
+}
